@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradient Generator</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    
+  </head>
+  <body>
+    <section id="generator">
+      
+        <h1>Linear Gradient Generator</h1>
+        <h3>Color</h3>
+        <div id="color-input">
+        <input
+          class="color1"
+          type="color"
+          name="color1"
+          id=""
+          value="#00ff00"
+        />
+        <input
+          class="color2"
+          type="color"
+          name="color2"
+          id=""
+          value="#fff700"
+        />
+        </div>
+        <h3>Direction</h2>
+        <div id="directions">
+          <div class="row1">
+            <button class="direction" onclick="setGradient('to bottom right')" >
+              <span class="material-icons">south_east</span>
+            </button>
+            <button class="direction" onclick="setGradient('to bottom')">
+              <span class="material-icons">arrow_downward</span>
+            </button>
+            <button class="direction" onclick="setGradient('to bottom left')">
+              <span class="material-icons">south_west</span>
+            </button>
+          </div>
+          <div class="row2">
+            <button id="right" class="direction" onclick="setGradient('to right')">
+              <span class="material-icons">arrow_forward</span>
+            </button>
+            <button class="direction" onclick="setGradient('to left')">
+              <span class="material-icons">arrow_back</span>
+            </button>
+          </div>
+          <div class="row3">
+            <button class="direction" onclick="setGradient('to top right')">
+              <span class="material-icons">north_east</span>
+            </button>
+            <button class="direction" onclick="setGradient('to top')">
+              <span class="material-icons">arrow_upward</span>
+            </button>
+            <button class="direction" onclick="setGradient('to top left')">
+              <span class="material-icons">north_west</span>
+            </button>
+          </div>
+        </div>
+        <div class="code-container">
+        <p>CSS code:</p>
+        <div class='output-container'>
+        <p class="outputCode"></p>
+      </div>
+      <!-- <button class="copy" onclick="('copy')">Copy CSS Code</button> -->
+      </div>
+    </section>
+    <section id="display"></section>
+    
+  </body>
+  <script src="main.js"></script>
+</html>
